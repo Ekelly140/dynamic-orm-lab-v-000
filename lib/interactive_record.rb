@@ -53,7 +53,7 @@ def self.find_by_name(name)
 end
 
 def self.find_by(attr)
-  sql = "SELECT * FROM #{self.table_name} WHERE attr = '#{attr}'"
+  sql = "SELECT * FROM #{self.table_name} WHERE col_names_for_insert = '#{attr}'"
   DB[:conn].execute(sql)
 end
 
